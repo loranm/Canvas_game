@@ -31,17 +31,26 @@
   }
 
   function getCanvas() {
-    return document.querySelector("#myGame");
+    const canvas = document.querySelector("#myGame");
+    setCanvasSize(canvas);
+    return canvas;
   }
 
-  function addListeners() {
+  function setCanvasSize(canvas) {
+    canvas.width = window.innerWidth * 0.8;
+    canvas.height = window.innerHeight * 0.5;
+  }
+
+  function addListeners(canvas) {
     const events = {
       keyDown: "keydown",
       keyUp: "keyup",
+      resize: "resize",
     };
 
     window.addEventListener(events.keyDown, onKeyDown);
     window.addEventListener(events.keyUp, onKeyUp);
+    window.addEventListener(events.resize, onWindowResize);
 
     function onKeyDown(evt) {
       evt.preventDefault();
@@ -51,6 +60,10 @@
 
     function onKeyUp(evt) {
       // TODO: implements key yup
+    }
+
+    function onWindowResize(evt) {
+      setCanvasSize(canvas);
     }
   }
 
@@ -158,6 +171,7 @@ class Ball {
 
       case this.directions.down:
         this.y += this.speedY;
+        break;
 
       default:
         break;
@@ -190,5 +204,6 @@ class Ball {
 
 class Game {
   started = false;
+  enemyBalls = [];
   playerBall = {};
 }

@@ -6,6 +6,9 @@
   --secondary: #136c72;
   --accent: white;
 
+  --shadow: 5px 4px 10px 3px rgba(0, 0, 0, 0.2);
+  --radius: 5px;
+
   /* FONTS */
   --main-text-font: "Roboto", sans-serif;
 }

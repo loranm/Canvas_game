@@ -14,11 +14,19 @@ section.game {
 
 .game button {
   background: none;
+  border-radius: var(--radius);
   border: 1px solid var(--primary);
   font-size: 1.5rem;
   padding: 1rem;
   color: var(--accent);
   margin: auto 1rem;
+  transition: 1;
+}
+
+.game button:hover {
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: var(--shadow);
 }
 
 #myGame {
