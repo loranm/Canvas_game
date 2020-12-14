@@ -1,0 +1,15 @@
+section.game {
+  background: var(--secondary);
+
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#myGame {
+  outline: 2px solid red;
+  background: rgba(0, 0, 0, 0.2);
+  width: 600px;
+  height: 300px;
+}

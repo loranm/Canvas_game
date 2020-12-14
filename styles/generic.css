@@ -1,0 +1,11 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--primary);
+  font-family: var(--main-text-font);
+  color: var(--accent);
+}
